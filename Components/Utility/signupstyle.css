@@ -1,0 +1,48 @@
+/* --- การตั้งค่าพื้นฐานและ Tailwind --- */
+@import "tailwindcss";
+@import "tailwindcss/preflight"
+utilities;
+
+/* --- สไตล์สำหรับ Body --- */
+.body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- พื้นหลังแบบ Gradient Blobs --- */
+.color-blob-1, .color-blob-2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 0;
+}
+
+.color-blob-1 {
+  width: 500px;
+  height: 500px;
+  /* ลองเปลี่ยนสีตรงนี้ได้เลย */
+  background: rgba(0, 78, 188, 0.555);
+  top: -200px;
+  left: -200px;
+}
+
+.color-blob-2 {
+  width: 400px;
+  height: 400px;
+  /* ลองเปลี่ยนสีตรงนี้ได้เลย */
+  background: rgba(0, 50, 176, 0.593);
+  bottom: -200px;
+  right: -200px;
+}
+
+/* --- สไตล์ของ Glassmorphism Card --- */
+.glass-container {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}

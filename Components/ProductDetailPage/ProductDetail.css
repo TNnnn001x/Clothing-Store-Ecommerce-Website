@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.size_btn{
+    box-shadow: 0 0 5px 1px black;
+}
+
+.cart-btn{
+    cursor: url('../../assets/cursor/cursor-cart.svg') 32 32,pointer;
+}
+
+.fav-btn{
+    cursor: url('../../assets/cursor/cursor-fav.svg') 32 32,pointer;
+}

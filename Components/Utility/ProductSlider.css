@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root{
+    --ProductSlider-item1-transform: translateX(-100%);
+    --ProductSlider-item2-transform: translateX(0%);
+    --ProductSlider-item3-transform: translateX(100%);
+}
+
+.MoreProduct_container .MoreProduct .grid_items:nth-child(1){
+    transform: var(--ProductSlider-item2-transform);
+}
+
+.MoreProduct_container .MoreProduct .grid_items:nth-child(2){
+    transform: var(--ProductSlider-item1-transform);      
+}
+
+.MoreProduct_container .MoreProduct .grid_items:nth-child(3){
+    transform: var(--ProductSlider-item1-transform);
+}
+
+.MoreProduct_container .MoreProduct .grid_items:nth-child(4){
+    transform: var(--ProductSlider-item1-transform);
+}
+
+.MoreProduct_container.next .MoreProduct .grid_items:nth-child(1){
+    animation: SlideToSecond 1s ease-in-out;
+}
+
+.MoreProduct_container.next .MoreProduct .grid_items:last-child{
+    animation: SlideToThird 1s ease-in-out;
+}
+
+@keyframes SlideToSecond {
+    from{
+        transform: var(--ProductSlider-item3-transform);
+    }
+}
+
+@keyframes SlideToThird {
+    from{
+        transform: var(--ProductSlider-item2-transform);
+    }
+}
+
+.MoreProduct_container.prev .MoreProduct .grid_items:nth-child(2){
+    animation: SlideFromSecond 1s ease-in-out;
+}
+
+.MoreProduct_container.prev .MoreProduct .grid_items:nth-child(1){
+    animation: SlideFromFirst 1s ease-in-out;
+}
+
+@keyframes SlideFromSecond {
+    from{
+        transform: var(--ProductSlider-item2-transform);
+    }
+    to{
+        transform: var(--ProductSlider-item3-transform);
+    }
+}
+
+@keyframes SlideFromFirst {
+    from{
+        transform: var(--ProductSlider-item1-transform);
+    }
+}
