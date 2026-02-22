@@ -1,7 +1,0 @@
-@import "tailwindcss";
-
-.glass-container {
-  background-color: rgba(255, 255, 255, 0.15); /* ทำให้พื้นหลังโปร่งแสง */
-  backdrop-filter: blur(10px); /* สร้างเอฟเฟกต์กระจกฝ้า */
-  -webkit-backdrop-filter: blur(10px); /* สำหรับ Safari */
-}
